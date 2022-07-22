@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource("/category",\App\Http\Controllers\CategoryController::class);
+Route::resource('/photos', PhotoController::class);
 
+Route::resource("/category",\App\Http\Controllers\CategoryController::class);
 
