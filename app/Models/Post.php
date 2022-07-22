@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+
+
+    public function photos()
+    {
+        return $this->hasMany(Photo::class);
+    }
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
+
+
+
 }
