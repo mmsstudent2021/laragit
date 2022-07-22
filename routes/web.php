@@ -1,6 +1,10 @@
 <?php
 
+
 use App\Http\Controllers\PostController;
+
+use App\Http\Controllers\PhotoController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +23,8 @@ Route::get('/', function () {
 });
 
 Route::resource('/post', PostController::class);
+
+Route::resource('/photos', PhotoController::class);
+
+Route::resource("/category",\App\Http\Controllers\CategoryController::class);
+
