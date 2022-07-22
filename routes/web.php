@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 
 Route::resource('/photos', PhotoController::class);
+
+Route::resource("/category",\App\Http\Controllers\CategoryController::class);
+
